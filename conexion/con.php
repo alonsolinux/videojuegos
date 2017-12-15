@@ -1,5 +1,5 @@
 <?php 
-	$mi_conexion = "mysql:dbname = videoJuegos";
+	$mi_conexion = "mysql:dbname=videoJuegos;host=localhost";
 	$usuario = "alberto";
 	$contraseña = "akon1995";
 
