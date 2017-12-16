@@ -9,6 +9,10 @@
 
     <!--Vriables del titulio-->
      <title><?php echo $title; ?></title>
+
+    <?php 
+      include('js/funciones.js');
+    ?> 
  </head>
 
 <body>
