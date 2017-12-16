@@ -18,10 +18,18 @@
 <body>
  	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
- 
- <nav>
-    <div class="nav-wrapper grey lighten-5">
-      <a href="#" class="brand-logo  grey-text">Video Juegos
+
+<div class="navbar-fixed">
+  <nav class="grey lighten-5">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right grey-text">Video Juegos</a>
+
       <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="img/video.png" style="width: 78px; height: 60px;"></a>
+
+        <ul id="nav-mobile" class="left side-nav">
+          <li><a href="index.php">Inicio</a></li>
+        </ul>
+
     </div>
   </nav>
+</div>

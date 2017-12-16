@@ -7,6 +7,7 @@
 <?php 
 	//LLENADO DE LA TABLA FINAL
   	$consultas_sql = 'SELECT Videojuego.*,Distribuidor.Nombre_distribuidor,Desarrollo.Nombre_desarrollo FROM Videojuego INNER JOIN Distribuidor ON Distribuidor.idDistribuidor = Videojuego.Distribuidor_idDistribuidor INNER JOIN Desarrollo ON Desarrollo.idDesarrollo = Videojuego.Desarrollo_idDesarrollo WHERE Nombre LIKE :search ORDER by idVideojuego ASC';
+
 		$search = isset($_GET['Nombre'])? $_GET['Nombre']: '';
 		$arr[':search']= '%' . $search . '%';
 		$statement = $pdo->prepare($consultas_sql);
@@ -66,6 +67,28 @@
 <?php 
  	include 'extend/cabecera.php';
 ?>
+
+<!---Buscador-->
+<br>
+	<div class="container">
+	<div class="card">
+		<div class="card-content">
+			<form method="get">
+      			<h2 class="card-title">Buscador de juegos</h2>
+        		<div class="input-field col s12">
+         		<input type="text" id="autocomplete-input" name="Nombre" class="autocomplete">
+         		<label for="autocomplete-input">Ingrese el nombre del juego</label>
+         			<input class="waves-effect waves-light btn cyan" type="submit" value="Buscar">
+         			<a class="waves-effect waves-light btn red" href="index.php" type="submit" >Mostrar todo</a>
+       			</div>
+       		</form>
+		</div>
+	</div>
+	</div>
+</div>
+
+<!--fin de buscador-->
+
 <?php 
 	if($show_form){
  ?>
